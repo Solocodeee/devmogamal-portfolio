@@ -5125,3 +5125,10 @@ a img {
     margin: 0;
     color: #fff
 }
+
+.circle-image {
+    padding: 6px;
+    border-radius: 50%;        /* Makes the image circular */
+    border: 3px solid white;   /* Adds a white border */
+    object-fit: cover;         /* Ensures image fits within the circle */
+  }
