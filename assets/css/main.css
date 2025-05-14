@@ -5126,9 +5126,77 @@ a img {
     color: #fff
 }
 
-.circle-image {
-    padding: 6px;
-    border-radius: 50%;        /* Makes the image circular */
-    border: 3px solid white;   /* Adds a white border */
-    object-fit: cover;         /* Ensures image fits within the circle */
-  }
+
+.user-projects_2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.contents {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.contents p {
+  text-align: justify;
+}
+
+.carousel-right {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(100% * 8); /* 8 slides */
+  height: 100%;
+  animation: slideAnimation 24s infinite linear; /* Adjusted duration for smoother sliding */
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%; /* Each slide takes up exactly 100% of the carousel width */
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Animation: Move one slide at a time, looping smoothly */
+@keyframes slideAnimation {
+  0% { transform: translateX(0%); }
+  87.5% { transform: translateX(-87.5%); } /* Move 7 slides (7/8 = 87.5%) */
+  100% { transform: translateX(-87.5%); } /* Hold at the last slide briefly */
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background-color: #0071e3;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #005bbb;
+}
